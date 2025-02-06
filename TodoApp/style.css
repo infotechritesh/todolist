@@ -1,0 +1,226 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --body-color: #F9F9FE;
+    --epcl-main-color: #FF4C60;
+    --epcl-secondary-color: #65EBE7;
+    --epcl-titles-color: #454360;
+    --epcl-black-color: #4B4870;
+    --epcl-text-color: #596172;
+    --epcl-border-color: #EEEEEE;
+    --epcl-input-bg-color: #F9F9FE;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --header-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: var(--body-color);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Curoser Pointer */
+a,
+ul li,
+li,
+.logo,
+h3,
+h2 .title,
+title,
+button,
+input {
+    cursor: pointer;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Stylling Here */
+
+.container {
+    width: 30%;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+
+.todo_form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.todo_form input {
+    padding: 0.6rem 2rem;
+    width: 80%;
+    outline: none;
+    border: 1px solid var(--epcl-border-color);
+}
+
+.todo_form button {
+    padding: 0.6rem 2rem;
+    outline: none;
+    border: none;
+    border: 1px solid;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.tasks {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 2px solid var(--epcl-border-color);
+}
+
+.task {
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+    /* border-bottom: 1px solid var(--epcl-border-color); */
+}
+
+.task .task_name {
+    color: var(--epcl-black-color);
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.task .task_action a i {
+    color: #000;
+}
+
+.task .task_action button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.task .task_action .markest {
+    width: 20px;
+    height: 20px;
+    padding: 0 0.7rem;
+    border-radius: 50%;
+    border: 1px solid var(--epcl-border-color);
+    transition: all ease 0.2s;
+}
+
+.task .task_action .markest i {
+    display: none;
+    color: var(--epcl-text-color);
+}
+
+.task .task_action .come_markest {
+    border: 1px solid var(--epcl-titles-color);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.task .task_action .come_markest i {
+    display: flex;
+
+}
+
+.task .com_task p {
+    text-decoration: line-through;
+}
+
+.task .task_action .markest:hover {
+    /* background: var(--epcl-main-color); */
+    border: 1px solid var(--epcl-titles-color);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task .task_action .markest:hover i {
+    display: flex;
+}
+
+.task .task_action i {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    border: 2px solid var(--epcl-border-color);
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+input[type="checkbox"]::before {
+    content: "✔";
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked::before {
+    opacity: 1;
+}
